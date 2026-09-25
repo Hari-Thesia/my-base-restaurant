@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 30% 98%;
+    --foreground: 24 10% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 24 10% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 24 10% 12%;
+    --primary: 336 100% 25%;
+    --primary-foreground: 40 30% 98%;
+    --secondary: 36 44% 86%;
+    --secondary-foreground: 24 10% 12%;
+    --muted: 36 30% 92%;
+    --muted-foreground: 24 6% 40%;
+    --accent: 36 44% 86%;
+    --accent-foreground: 24 10% 12%;
+    --destructive: 0 72% 42%;
+    --destructive-foreground: 40 30% 98%;
+    --border: 36 24% 80%;
+    --input: 36 24% 80%;
+    --ring: 336 100% 25%;
+    --radius: 0.25rem;
+    --font-heading: 'Cormorant Garamond', ui-serif, Georgia, serif;
+    --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Playfair Display', ui-serif, Georgia, serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+    /* Brand palette for Cuore by Masala Diaries */
+    --color-maroon: #800020;
+    --color-maroon-dark: #5c0017;
+    --color-tan: #E8C8A0;
+    --color-terracotta: #D97334;
+    --color-sand: #E8D5A5;
+    --color-cream: #FBF7F0;
+    --color-charcoal: #202020;
+
+    --sidebar-background: 40 30% 96%;
+    --sidebar-foreground: 24 10% 18%;
+    --sidebar-primary: 336 100% 25%;
+    --sidebar-primary-foreground: 40 30% 98%;
+    --sidebar-accent: 36 30% 90%;
+    --sidebar-accent-foreground: 24 10% 18%;
+    --sidebar-border: 36 24% 80%;
+    --sidebar-ring: 336 100% 25%;
+  }
+
+  .dark {
+    --background: 24 10% 8%;
+    --foreground: 40 30% 96%;
+    --card: 24 10% 10%;
+    --card-foreground: 40 30% 96%;
+    --popover: 24 10% 10%;
+    --popover-foreground: 40 30% 96%;
+    --primary: 36 44% 70%;
+    --primary-foreground: 24 10% 10%;
+    --secondary: 24 10% 16%;
+    --secondary-foreground: 40 30% 96%;
+    --muted: 24 10% 16%;
+    --muted-foreground: 40 20% 65%;
+    --accent: 24 10% 16%;
+    --accent-foreground: 40 30% 96%;
+    --destructive: 0 62% 36%;
+    --destructive-foreground: 40 30% 96%;
+    --border: 24 10% 20%;
+    --input: 24 10% 20%;
+    --ring: 36 44% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    background-color: var(--color-cream);
+    color: var(--color-charcoal);
+  }
+
+  ::selection {
+    background-color: var(--color-maroon);
+    color: var(--color-cream);
+  }
+}
